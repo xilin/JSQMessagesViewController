@@ -143,6 +143,8 @@
  */
 @property (weak, nonatomic, readonly) UIView *avatarContainerView;
 
+@property (weak, nonatomic, readonly) JSQMessagesLabel *avatarBottomLabel;
+
 /**
  *  The media view of the cell. This view displays the contents of a media message.
  *

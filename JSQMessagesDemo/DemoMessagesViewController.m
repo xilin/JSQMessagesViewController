@@ -62,6 +62,11 @@
         self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero;
     }
     
+    CGFloat kAvatarSize = 40;
+    self.collectionView.collectionViewLayout.incomingAvatarViewSize = CGSizeMake(kAvatarSize, kAvatarSize);
+    self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeMake(kAvatarSize, kAvatarSize);
+    self.collectionView.collectionViewLayout.sectionInset = UIEdgeInsetsMake(0, 15, 0, 15);
+    
     self.showLoadEarlierMessagesHeader = YES;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage jsq_defaultTypingIndicatorImage]

@@ -39,6 +39,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UIView *avatarContainerView;
 
+@property (weak, nonatomic) IBOutlet JSQMessagesLabel *avatarBottomLabel;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageBubbleContainerWidthConstraint;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewTopVerticalSpaceConstraint;
@@ -130,6 +132,7 @@
     _mediaView = nil;
 
     _avatarImageView = nil;
+    _avatarBottomLabel = nil;
 
     [_tapGestureRecognizer removeTarget:nil action:NULL];
     _tapGestureRecognizer = nil;
@@ -151,6 +154,7 @@
 
     self.avatarImageView.image = nil;
     self.avatarImageView.highlightedImage = nil;
+    self.avatarBottomLabel.text = nil;
 }
 
 - (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
@@ -236,6 +240,7 @@
 
     self.messageBubbleContainerView.backgroundColor = backgroundColor;
     self.avatarContainerView.backgroundColor = backgroundColor;
+    self.avatarBottomLabel.backgroundColor = backgroundColor;
 }
 
 - (void)setAvatarViewSize:(CGSize)avatarViewSize
